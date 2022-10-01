@@ -20,24 +20,7 @@ barba.init({
   preventRunning: true,
   transitions: [
     {
-      enter(data) {
-        updateCurrentClass();
-        gsap.defaults({
-          ease: "power2.inOut",
-          duration: 1.2
-        });
-        if ($(".menu_link.w--current").length > 0) {
-          // If going to internal page
-          gsap.fromTo(".is-home", { x: "0%" }, { x: "49%" });
-          gsap.fromTo(".is-about", { x: "-49%" }, { x: "0%" });
-        } else {
-          // If going to the homepage
-          gsap.fromTo(".is-home", { x: "49%" }, { x: "0%" });
-          gsap.fromTo(".is-about", { x: "0%" }, { x: "-49%" });
-        }
-
-        $(data.next.container).addClass("fixed");
-        // Reveal page with clippath
+      enter(d
         return gsap.fromTo(
           data.next.container,
           { clipPath: `circle(0.5% at ${percentLeft}% ${percentTop}%)` },
