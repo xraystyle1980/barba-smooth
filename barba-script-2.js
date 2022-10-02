@@ -22,7 +22,7 @@ barba.init({
         });
       },
       leave(data) {
-        gsap.to(data.current.container.firstElementChild, { scale: 0.58 });
+        gsap.to(data.current.container.firstElementChild, { scale: 0.72 });
         return gsap.to(".overlay", {
           opacity: 1,
           duration: 0.6,
