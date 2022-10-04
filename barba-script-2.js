@@ -15,13 +15,15 @@ barba.init({
   preventRunning: true,
   transitions: [
     {
-      name: "opacity-transition",
+      name: "whatever",
       beforeLeave(data) {
         return gsap.to(data.current.container, {
           zIndex: 1
         });
       },
       
+
+
       leave(data) {
         gsap.to(data.current.container.firstElementChild, { scale: 0.96 });
         return gsap.to(".overlay", {
@@ -31,6 +33,8 @@ barba.init({
         });
       },
      
+
+
       enter(data) {
         const tl = new gsap.timeline({
           onComplete: function () {
@@ -47,9 +51,25 @@ barba.init({
           ease: "power2.out"
         });
       },
+
+
+
       afterEnter(data) {
         $(data.next.container).removeClass("fixed");
       }
+
+
+
     }
   ]
 });
+
+
+
+
+
+
+
+
+
+
