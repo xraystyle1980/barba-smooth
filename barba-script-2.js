@@ -26,7 +26,11 @@ barba.init({
 
       leave(data) {
         gsap.to(data.current.container.firstElementChild, { scale: 0.96 });
-        return gsap.to();
+        return gsap.to({
+          opacity: 1,
+          duration: 0.6,
+          ease: "power2.out"
+        });
       },
      
 
