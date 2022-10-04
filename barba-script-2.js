@@ -40,7 +40,7 @@ barba.init({
         return tl.from(data.next.container, {
           zIndex: 3,
           borderRadius: "5%",
-          xPercent: 100,
+          zPercent: 100,
           duration: 0.5,
           ease: "power2.out"
         });
