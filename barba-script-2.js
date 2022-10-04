@@ -21,6 +21,7 @@ barba.init({
           zIndex: 1
         });
       },
+      
       leave(data) {
         gsap.to(data.current.container.firstElementChild, { scale: 0.96 });
         return gsap.to(".overlay", {
@@ -29,6 +30,7 @@ barba.init({
           ease: "power2.out"
         });
       },
+     
       enter(data) {
         const tl = new gsap.timeline({
           onComplete: function () {
@@ -40,7 +42,7 @@ barba.init({
         return tl.from(data.next.container, {
           zIndex: 3,
           borderRadius: "5%",
-          yPercent: 100,
+          yPercent: 80,
           duration: 0.5,
           ease: "power2.out"
         });
