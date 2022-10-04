@@ -25,9 +25,9 @@ barba.init({
 
 
       leave(data) {
-        gsap.to(data.current.container.firstElementChild, { scale: 1.96 });
+        gsap.to(data.current.container.firstElementChild, { scale: 0.96 });
         return gsap.to(".overlay", {
-          opacity: 1,
+          opacity: 0.1,
           duration: 0.6,
           ease: "power2.out"
         });
@@ -46,7 +46,7 @@ barba.init({
         return tl.from(data.next.container, {
           zIndex: 3,
           borderRadius: "5%",
-          xPercent: 100,
+          yPercent: 100,
           duration: 0.5,
           ease: "power2.out"
         });
